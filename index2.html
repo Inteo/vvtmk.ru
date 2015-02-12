@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="f/css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
   <script src="f/js/jquery-1.11.2.min.js"></script>
+  <script src="f/js/jquery.scrollTo.min.js"></script>
   <script src="f/js/common.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,700,italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
@@ -19,7 +20,7 @@
 <body>
   <div class="b-wrap clearfix">  
     <header class="b-header">
-      <div class="b-header__holder holder">
+      <div class="b-header__holder b-holder">
         <a href="/" class="b-logo">
           <img src="f/i/logo.png" alt="" class="b-logo__img">
           <span class="b-logo__text">
@@ -37,107 +38,122 @@
       </div>
     </header>
     <div class="b-content">
-      <div class="b-top-banner">
+      <section class="b-top-banner">
         <img src="f/i/main-slides/1.jpg" alt="" class="b-top-banner__img">
-        <div class="b-top-banner__holder holder">
+        <div class="b-top-banner__holder b-holder">
           <ul class="b-menu">
-            <li class="b-menu__item iconized-link active"><span><i class="icon-venting-small"></i>Вентиляция</span></li>
-            <li class="b-menu__item iconized-link"><a href="#"><i class="icon-condit-small"></i>Кондиционирование</a></li>
-            <li class="b-menu__item iconized-link"><a href="#"><i class="icon-civ-def-small"></i>гражданская оборона</a></li>
-            <li class="b-menu__item iconized-link"><a href="#"><i class="icon-chute-small"></i>мусоропроводы</a></li>
-            <li class="b-menu__item iconized-link"><a href="#"><i class="icon-thermal-small"></i>Тепловое оборудование</a></li>
+            <li class="b-menu__item"><span class="iconized-link active"><i class="icon-venting-small"></i>Вентиляция</span></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-condit-small"></i>Кондиционирование</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-civ-def-small"></i>гражданская оборона</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-chute-small"></i>мусоропроводы</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-thermal-small"></i>Тепловое оборудование</a></li>
           </ul>
+          <h1 class="b-top-banner__title">Вентиляция</h1>
           <div class="b-top-banner__text">
-            <p class="b-top-banner__title">Вентиляция</p>
-            <p class="b-top-banner__description">ЗАО «Верхневолжский территориальный монтажный комплекс» занимается проектированием, изготовлением и монтажом промышленной вентиляции, а также техническим обслуживанием общеобменной вентиляции.</p>
+            <p class="b-top-banner__description">«Верхневолжский территориальный монтажный комплекс» занимается проектированием, изготовлением и монтажом промышленной вентиляции, а также сервисным обслуживанием всех типов вентиляции.</p>
             <a href="#" class="b-top-banner__btn red-btn red-btn_light">Подробнее</a>
           </div><ul class="b-top-banner__links">
-            <li><a href="#"><i></i>Готовые решения</a></li>
-            <li><a href="#"><i></i>Типы вентиляционной системы</a></li>
-            <li><a href="#"><i></i>Каталог продукции</a></li>
+            <li><a href="#" id="scroll-from-1" class="b-scroll-btn"><i></i>Готовые решения</a></li>
+            <li><a href="#" id="scroll-from-2" class="b-scroll-btn"><i></i>Типы вентиляционной системы</a></li>
+            <li><a href="#" id="scroll-from-3" class="b-scroll-btn"><i></i>Каталог продукции</a></li>
           </ul>
         </div>
-      </div>
-      <div class="b-solutions holder">
-        <p class="b-solutions__title">Готовые решения</p>
-        <p class="b-solutions__text">Вся линейка наших решений по вентиляции оснащена исключительно роторными рекуператорами самого последнего поколения, обладающими максимальным КПД (до 90%) и минимальным энергопотреблением. В зависимости от задач, вентиляционные установки могут комплектоваться воздухонагревателями и воздухоохладителями, а система воздухоразведения — традиционными и гибкими воздуховодами.</p>
-        <ul class="b-solutions__col b-solutions__col_small">
-          <li class="b-solutions__subtitle"><a href="#">Бытовая вентиляция</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция квартир</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция коттеджей</a></li>
-        </ul><ul class="b-solutions__col">
-          <li class="b-solutions__subtitle"><a href="#">Коммерческая вентиляция</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция офисов</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция торговых центров</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция административных зданий</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция магазинов</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция гостиниц</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция ресторанов</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция и осушение бассейна</a></li>
-        </ul><ul class="b-solutions__col">
-          <li class="b-solutions__subtitle"><a href="#">Промышленная вентиляция</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция предприятий</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция цехов</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция складов</a></li>
-          <li class="b-solutions__link"><a href="#">Вентиляция производственных помещений</a></li>
-        </ul>
-      </div>
-      <div class="b-vent-types">
-        <div class="b-vent-types__holder holder">
-          <p class="b-vent-types__title">Типы вентиляционной системы</p>
-          <p class="b-vent-types__text">Вентиляционная система — совокупность устройств для обработки, транспортирования, подачи и удаления воздуха. В общем случае вентиляцией называют регулируемый воздухообмен в помещении. Однако за этим термином скрывается несколько различных типов вентиляционных систем. <a href="#">Свяжитесь с нами</a>, и мы поможем правильно выбрать подходящий тип вентиляционной системы.</p>
-          <ul class="b-vent-types__links">
-            <li><a href="#">Приточная вентиляция</a></li>
-            <li><a href="#">Вытяжная система вентиляции</a></li>
-            <li><a href="#">Приточно-вытяжная система вентиляции</a></li>
-            <li><a href="#">Вентиляции с рекуперацией тепла</a></li>
-          </ul><ul class="b-vent-types__links">
-            <li><a href="#">Вентиляция с рециркуляцией воздуха</a></li>
-            <li><a href="#">Центральная вентиляция</a></li>
-            <li><a href="#">Противодымная вентиляция</a></li>
+      </section>
+      <section class="b-section">
+        <div id="scroll-to-1" class="b-holder">
+          <h2 class="b-section__title">Готовые решения</h2>
+          <p class="b-section__text">Основываясь на огромном опыте в проектировании, изготовлении и монтаже систем вентиляции мы готовы предложить Вам решения для многих объектов. Наши решения достаточно гибкие и после составления технического задания мы сможем подобрать Вам индивидуальное и оптимальное решение по устройству системы вентиляции</p>
+          <ul class="b-list b-list_small b-list_col_small">
+            <li class="b-list__subtitle"><a href="#">Бытовая вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция квартир</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция коттеджей</a></li>
+          </ul><ul class="b-list b-list_small">
+            <li class="b-list__subtitle"><a href="#">Коммерческая вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция торговых центров</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция административных зданий (офисов)</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция гостиниц</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция ресторанов</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция спортивных залов</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция ледовых арен</a></li>
+          </ul><ul class="b-list b-list_small">
+            <li class="b-list__subtitle"><a href="#">Промышленная вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция промышленных предприятий</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция складов</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция лакокрасочных предприятий</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция автосервисных центров</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция фармацевтических производств</a></li>
+            <li class="b-list__link"><a href="#">Аспирация</a></li>
+            <li class="b-list__link"><a href="#">Пневмотранспорт</a></li>
           </ul>
         </div>
-      </div>
-      <div class="b-vent-catalog holder">
-        <p class="b-vent-catalog__title">Каталог продукции</p>
-        <p class="b-vent-catalog__text">ЗАО «Верхневолжский территориальный монтажный комплекс» предоставляет продукцию собственного производства, а так же продукцию лучших зарубежных и российских производителей, таких как Remak, Systemair, Ostberg и многие другие. Имея 25-летний опыт работы и более 2000 м2 производственных площадей, мы гарантируем быстрое и качественное изготовление любой продукции.</p>
-        <div class="b-vent-catalog__tabs b-tabs">
-          <ul class="b-tabs__control">
-            <li class="b-tabs__btn b-tabs__btn_active"><span>По товару</span></li>
-            <li class="b-tabs__btn"><span>По бренду</span></li>
+      </section>
+      <section class="b-section b-section_gray">
+        <div id="scroll-to-2" class="b-holder">
+          <h2 class="b-section__title">Типы вентиляционной системы</h2>
+          <p class="b-section__text">Вентиляционная система — совокупность устройств для обработки, транспортирования, подачи и удаления воздуха. В общем случае вентиляцией называют регулируемый воздухообмен в помещении. Однако за этим термином скрывается несколько различных типов вентиляционных систем. <a href="#">Свяжитесь с нами</a>, и мы поможем правильно выбрать подходящий тип вентиляционной системы.</p>
+          <ul class="b-list b-list_small">
+            <li class="b-list__subtitle"><a href="#">Естественная вентиляция</a></li>
+            <li class="b-list__subtitle"><a href="#">Общеобменная и местная вентиляция</a></li>
+            <li class="b-list__subtitle"><a href="#">Аспирация</a></li>
+          </ul><ul class="b-list b-list_small">
+            <li class="b-list__subtitle"><a href="#">Принудительная вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Приточная вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Вытяжная вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Приточно-вытяжная вентиляция</a></li>
+            <li class="b-list__link"><a href="#">Вентиляция с рекуперацией тепла</a></li>
+            <li class="b-list__link"><a href="#">Противопожарная вентиляция, дымоудаление</a></li>
           </ul>
-          <div class="b-tabs__content b-tabs__content_active">
-            <ul class="b-vent-catalog__lnks">
-              <li><a href="#">Детали систем вентиляции</a></li>
-              <li><a href="#">Вентиляторы</a></li>
-              <li><a href="#">Осушители воздуха</a></li>
-            </ul><ul class="b-vent-catalog__lnks">
-              <li><a href="#">Увлажнители воздуха</a></li>
-              <li><a href="#">Воздухоочистители</a></li>
-              <li><a href="#">Пылеулавливающее оборудование</a></li>
+        </div>
+      </section>
+      <section class="b-section">
+        <div id="scroll-to-3" class="b-holder">
+          <h2 class="b-section__title">Каталог продукции</h2>
+          <p class="b-section__text">Верхневолжский территориальный монтажный комплекс предоставляет продукцию собственного производства, а так же продукцию лучших зарубежных и российских производителей, таких как Remak, Systemair, Ostberg и многие другие. Имея 25-летний опыт работы и более 2000 м2 производственных площадей, мы гарантируем быстрое и качественное изготовление любой продукции.</p>
+          <div class="b-tabs">
+            <ul class="b-tabs__control">
+              <li class="b-tabs__btn b-tabs__btn_active"><span>По товару</span></li>
+              <li class="b-tabs__btn"><span>По бренду</span></li>
             </ul>
-          </div>
-          <div class="b-tabs__content">
-            <ul class="b-vent-catalog__brand">
-              <li><a href="#"><i class="icon-brand icon-brand_1"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_2"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_3"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_4"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_5"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_6"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_7"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_8"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_9"></i></a>
-              </li><li><a href="#"><i class="icon-brand icon-brand_10"></i></a>
-              </li>
-            </ul>
+            <div class="b-tabs__content b-tabs__content_active">
+              <ul class="b-list">
+                <li class="b-list__link"><a href="#">Детали систем вентиляции</a></li>
+                <li class="b-list__link"><a href="#">Вентиляторы</a></li>
+                <li class="b-list__link"><a href="#">Осушители воздуха</a></li>
+              </ul><ul class="b-list">
+                <li class="b-list__link"><a href="#">Увлажнители воздуха</a></li>
+                <li class="b-list__link"><a href="#">Воздухоочистители</a></li>
+                <li class="b-list__link"><a href="#">Пылеулавливающее оборудование</a></li>
+              </ul>
+            </div>
+            <div class="b-tabs__content">
+              <ul class="b-brand">
+                <li class="b-brand__item b-brand__item_1"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_2"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_3"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_4"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_5"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_6"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_7"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_8"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_9"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_10"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_11"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_12"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_13"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_14"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_15"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_16"><a href="#"><i></i></a>
+                </li><li class="b-brand__item b-brand__item_17"><a href="#"><i></i></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div> 
   <footer class="b-footer clearfix">
-    <div class="b-footer__holder holder">
+    <div class="b-footer__holder b-holder">
       <div class="b-footer__col">
         <ul>
           <li class="b-footer__title"><a href="#">О компании</a></li>
