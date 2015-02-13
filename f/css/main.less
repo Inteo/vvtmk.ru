@@ -1338,6 +1338,45 @@ a:focus {
   background-image: url("../../f/i/icons.png");
   background-repeat: no-repeat
 }
+[class^='iconize-'], [class*=' iconize-'] {
+  position: relative;
+  display: inline-block;
+}
+[class^='iconize-']:before, [class*=' iconize-']:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: '';
+  background: url('../../f/i/icons.png') -9999px -9999px no-repeat;
+}
+.iconize-back {
+	margin-left: 60px;
+	&:before {
+		width: 40px;
+		height: 40px;
+		left: -60px;
+		top: -10px;
+		background-position: 0 -161px;
+	}
+	&:hover:before {
+		background-position: -40px -161px;
+	}
+}
+.icon-order {
+	width: 15px;
+	height: 15px;
+	background-position: -66px -145px;
+	margin-right: 10px;
+}
+.iconized-link:hover .icon-order {
+	background-position: -86px -145px;
+}
+.icon-lens {
+	width: 40px;
+	height: 40px;
+	background-position: 0 -201px;
+}
 .icon-ham {
 	width: 20px;
 	height: 15px;
@@ -1482,7 +1521,7 @@ a:focus {
 	border-bottom: 1px dotted;
 	color: @red;
 }
-.red-btn {
+.tmk-btn {
 	display: inline-block;
 	vertical-align: top;
 	text-decoration: none;
@@ -1509,6 +1548,10 @@ a:focus {
 		&:focus {
 			color: #fff;
 		}
+	}
+	&_red {
+		border-color: #f60000;
+		color: #f60000;
 	}
 }
 .rub {
@@ -1948,8 +1991,9 @@ a:focus {
 		left: 0;
     overflow: hidden;
     position: absolute;
-    top: -106px;
+    top: 0;
     width: 100%;
+    height: 100%;
     z-index: -1;
 		& img {
 			position: absolute;
@@ -1967,12 +2011,18 @@ a:focus {
 		padding-right: 50px;
 	}
 	&__title {
-		font: 50px 'Open Sans', sans-serif;
+		font: 50px/60px 'Open Sans', sans-serif;
 		letter-spacing: .1em;
 		text-transform: uppercase;
 		color: #fff;
 		margin-bottom: 10px;
 		padding-top: 25px;
+		&_top_15 {
+			padding-top: 15px;
+		}
+		&_bottom_40 {
+			margin-bottom: 40px;
+		}
 	}
 	&__description {
 		font-size: 16px;
@@ -2020,6 +2070,12 @@ a:focus {
 	&__btn span {
 		font-weight: normal;
 		font-size: 14px;
+	}
+	&_small {
+		height: 395px;
+		& .b-top-banner__img img {
+			top: -110px;
+		}
 	}
 }
 .b-menu {
@@ -2101,6 +2157,9 @@ a:focus {
 		margin-bottom: 30px;
 		&_big-bottom {
 			margin-bottom: 60px;
+		}
+		&_bottom_15 {
+			margin-bottom: 15px;
 		}
 	}
 	&__subtitle {
@@ -2571,6 +2630,7 @@ a:focus {
 	}
 }
 .b-what-is {
+	margin-bottom: 10px;
 	&__btn {
 		cursor: pointer;
 		margin-bottom: 30px;
@@ -2761,6 +2821,116 @@ a:focus {
   		max-width: 400px;
   	}
   }
+}
+.b-breadcrumbs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 12px;
+	&__item {
+		position: relative;
+		color: #fff;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 6px;
+		line-height: 12px;
+		&:before {
+			content: '/';
+			font-size: 12px;
+			position: absolute;
+			left: -7px;
+			top: 2px;
+		}
+		& a {
+			color: #fff;
+			font-size: 12px;
+			&:hover {
+				color: @red;
+			}
+		}
+		&_main {
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+.b-back-btn {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px dotted @red;
+	line-height: 16px;
+	font-size: 14px;
+}
+.b-goods {
+	&__table {
+		display: table;
+		margin-bottom: 50px;
+	}
+	&__row {
+		display: table-row;
+	}
+	&__img-col {
+		display: table-cell;
+		width: 50%;
+		padding-right: 5%;
+		min-height: inherit;
+	}
+	&__img {
+			border: 3px solid #f3f6f8;
+			padding: 30px;
+			position: -webkit-sticky;
+		  position: sticky;
+		  top: 0;
+			cursor: pointer;
+			& img {
+				width: 100%;
+			}
+			& .icon-lens {
+				position: absolute;
+				right: -3px;
+				top: -3px;
+				display: none;
+			}
+			&:hover {
+				border-color: @red;
+				& .icon-lens {
+					display: block;
+				}
+			}
+		}
+	&__detail {
+		display: table-cell;
+		vertical-align: top;
+		width: 45%;
+	}
+	&__description {
+		margin-bottom: 30px;
+	}
+	&__order {
+		padding: 30px;
+		background: #f3f6f8;
+		&-table {
+			display: table;
+		}
+		&-row {
+			display: table-row;
+		}
+		&-btn {
+			display: table-cell;
+			vertical-align: middle;
+			padding-right: 30px;
+		}
+		& p {
+			display: table-cell;
+			vertical-align: top;
+			font-style: italic;
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
 }
 .b-footer {  
 	height: 330px;
