@@ -45,7 +45,9 @@
     </header>
     <div class="b-content">
       <section class="b-top-banner">
-        <img src="f/i/main-slides/3.jpg" alt="" class="b-top-banner__img">
+        <div class="b-top-banner__img">
+          <img src="f/i/main-slides/3.jpg" alt="">
+        </div>
         <div class="b-top-banner__holder b-holder">
           <ul class="b-menu">
             <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-venting-small"></i>Вентиляция</a></li>
@@ -59,262 +61,269 @@
             <p class="b-top-banner__description">Мы выполняетм полный спектр инженерных услуг по вентиляции и кондиционированию сооружений гражданской обороны любой сложности, начиная с проектирования и заканчивая пусконаладочными работами и сервисным обслуживанием.</p>
             <a href="#" class="b-top-banner__btn red-btn red-btn_light iconized-link"><i class="icon-download"></i>Скачать каталог <span>(.pdf, 4,5Мб)</span></a>
           </div><ul class="b-top-banner__links">
-            <li><a href="#" id="scroll-from-1" class="b-scroll-btn"><i></i>Защитные и защитно-герметические устройства и изделия</a></li>
-            <li><a href="#" id="scroll-from-2" class="b-scroll-btn"><i></i>Вентиляционные агрегаты, фильтры, устройства и изделия для систем вентиляции</a></li>
+            <li><a href="#" class="js-scroll-link" data-scrollto="1"><i></i>Защитные и защитно-герметические устройства и изделия</a></li>
+            <li><a href="#" class="js-scroll-link" data-scrollto="4"><i></i>Вентиляционные агрегаты, фильтры, устройства и изделия для систем вентиляции</a></li>
           </ul>
         </div>
       </section>
       <section class="b-section">
         <div class="b-holder">
           <div class="b-ham-menu">
-            <div class="b-ham-menu__btn icon-ham"></div>
-            <div class="b-ham-menu__content">
-              
+            <div class="b-ham-menu__wrap">
+              <div class="b-ham-menu__holder">
+                <div class="b-ham-menu__btn"><i class="icon-ham"></i></div>
+                <div class="b-ham-menu__content">
+                  <ul>
+                    <li class="b-ham-menu__item b-ham-menu__item_section"><span class="js-scroll-link" data-scrollto="1"><i></i>Защитные и защитно-герметические устройства и изделия</span></li>
+                    <li class="b-ham-menu__item"><span class="js-scroll-link" data-scrollto="2"><i></i>Защитно-герметические и герметические двери, ворота и ставни</span></li>
+                    <li class="b-ham-menu__item"><span class="js-scroll-link" data-scrollto="3"><i></i>Противовзрывные устройства и коробки</span></li>
+                    <li class="b-ham-menu__item b-ham-menu__item_section"><span class="js-scroll-link" data-scrollto="4"><i></i>Вентиляционные агрегаты, фильтры, устройства и изделия для систем вентиляции</span></li>
+                    <li class="b-ham-menu__item"><span class="js-scroll-link" data-scrollto="5"><i></i>Защитно-герметические и герметические двери, ворота и ставни</span></li>
+                    <li class="b-ham-menu__item"><span class="js-scroll-link" data-scrollto="6"><i></i>Противовзрывные устройства и коробки</span></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div id="scroll-to-1">
-            <h2 class="b-section__title b-section__title_big-bottom">Защитные и защитно-герметические устройства и изделия</h2>
-            <p class="b-section__subtitle">Защитно-герметические и герметические двери, ворота и ставни</p>
-            <p class="b-section__text b-section__text_small-bottom">Защитные и защитно-герметические устройства и изделия предназначены для защиты от проникновения ударной волны и отравляющих веществ в убежище. К ним относятся защитно-герметические и герметические двери, орота и ставни, противовзрывные устройства и коробки для них, расширительные камеры, герметические клапаны и клапаны избыточного давления, регулирующие заглушки.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
-            <div class="b-what-is">
-              <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
-              <div class="b-what-is__wrap">
-                <div class="b-what-is__content">
-                  <div class="b-what-is__holder">
-                    <div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Расширительная камера.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-2-<span>1</span></p>
-                      <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
-                      <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
-                    </div>
+          <h2 class="b-section__title b-section__title_big-bottom js-scroll-target" data-scrollto="1">Защитные и защитно-герметические устройства и изделия</h2>
+          <p class="b-section__subtitle js-scroll-target" data-scrollto="2">Защитно-герметические и герметические двери, ворота и ставни</p>
+          <p class="b-section__text b-section__text_small-bottom">Защитные и защитно-герметические устройства и изделия предназначены для защиты от проникновения ударной волны и отравляющих веществ в убежище. К ним относятся защитно-герметические и герметические двери, орота и ставни, противовзрывные устройства и коробки для них, расширительные камеры, герметические клапаны и клапаны избыточного давления, регулирующие заглушки.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
+          <div class="b-what-is">
+            <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
+            <div class="b-what-is__wrap">
+              <div class="b-what-is__content">
+                <div class="b-what-is__holder">
+                  <div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Расширительная камера.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-2-<span>1</span></p>
+                    <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
+                    <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="b-catalog">
-              <a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/1.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/2.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/3.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/4.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a>
-            </div>
-            <p class="b-section__subtitle">Противовзрывные устройства и коробки</p>
-            <p class="b-section__text b-section__text_small-bottom">Противовзрывные устройства (МЗС и УЗС) предназначены для защиты вентиляционных систем от воздействия ударной волны большой длительности с давлением 0,3 — 10,0 кгс/см. Противовзрывные устройства автоматически, под действием ударной волны, перекрывают вентиляционные шахты или воздуховоды и обеспечивают защиту от проникания волны в убежище.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
-            <div class="b-what-is">
-              <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
-              <div class="b-what-is__wrap">
-                <div class="b-what-is__content">
-                  <div class="b-what-is__holder">
-                    <div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Расширительная камера.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-2-<span>1</span></p>
-                      <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
-                      <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="b-catalog">
-              <a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/1.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/2.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/3.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/4.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a>
             </div>
           </div>
-          <div id="scroll-to-2">
-            <h2 class="b-section__title b-section__title_big-bottom">Вентиляционные агрегаты, фильтры, устройства и изделия для систем вентиляции</h2>
-            <p class="b-section__subtitle">Защитно-герметические и герметические двери, ворота и ставни</p>
-            <p class="b-section__text b-section__text_small-bottom">Защитные и защитно-герметические устройства и изделия предназначены для защиты от проникновения ударной волны и отравляющих веществ в убежище. К ним относятся защитно-герметические и герметические двери, орота и ставни, противовзрывные устройства и коробки для них, расширительные камеры, герметические клапаны и клапаны избыточного давления, регулирующие заглушки.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
-            <div class="b-what-is">
-              <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
-              <div class="b-what-is__wrap">
-                <div class="b-what-is__content">
-                  <div class="b-what-is__holder">
-                    <div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Расширительная камера.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-2-<span>1</span></p>
-                      <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
-                      <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
-                    </div>
+          <div class="b-catalog">
+            <a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/1.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/2.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/3.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/4.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a>
+          </div>
+          <p class="b-section__subtitle js-scroll-target" data-scrollto="3">Противовзрывные устройства и коробки</p>
+          <p class="b-section__text b-section__text_small-bottom">Противовзрывные устройства (МЗС и УЗС) предназначены для защиты вентиляционных систем от воздействия ударной волны большой длительности с давлением 0,3 — 10,0 кгс/см. Противовзрывные устройства автоматически, под действием ударной волны, перекрывают вентиляционные шахты или воздуховоды и обеспечивают защиту от проникания волны в убежище.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
+          <div class="b-what-is">
+            <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
+            <div class="b-what-is__wrap">
+              <div class="b-what-is__content">
+                <div class="b-what-is__holder">
+                  <div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Расширительная камера.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-2-<span>1</span></p>
+                    <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
+                    <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="b-catalog">
-              <a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/1.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/2.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/3.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/4.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a>
-            </div>
-            <p class="b-section__subtitle">Противовзрывные устройства и коробки</p>
-            <p class="b-section__text b-section__text_small-bottom">Противовзрывные устройства (МЗС и УЗС) предназначены для защиты вентиляционных систем от воздействия ударной волны большой длительности с давлением 0,3 — 10,0 кгс/см. Противовзрывные устройства автоматически, под действием ударной волны, перекрывают вентиляционные шахты или воздуховоды и обеспечивают защиту от проникания волны в убежище.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
-            <div class="b-what-is">
-              <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
-              <div class="b-what-is__wrap">
-                <div class="b-what-is__content">
-                  <div class="b-what-is__holder">
-                    <div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Расширительная камера.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
-                      <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК-2-<span>1</span></p>
-                      <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
-                    </div><div class="b-what-is__col">
-                      <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
-                      <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
-                    </div>
+          </div>
+          <div class="b-catalog">
+            <a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/1.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/2.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/3.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/4.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a>
+          </div>
+          <h2 class="b-section__title b-section__title_big-bottom js-scroll-target" data-scrollto="4">Вентиляционные агрегаты, фильтры, устройства и изделия для систем вентиляции</h2>
+          <p class="b-section__subtitle js-scroll-target" data-scrollto="5">Защитно-герметические и герметические двери, ворота и ставни</p>
+          <p class="b-section__text b-section__text_small-bottom">Защитные и защитно-герметические устройства и изделия предназначены для защиты от проникновения ударной волны и отравляющих веществ в убежище. К ним относятся защитно-герметические и герметические двери, орота и ставни, противовзрывные устройства и коробки для них, расширительные камеры, герметические клапаны и клапаны избыточного давления, регулирующие заглушки.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
+          <div class="b-what-is">
+            <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
+            <div class="b-what-is__wrap">
+              <div class="b-what-is__content">
+                <div class="b-what-is__holder">
+                  <div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Расширительная камера.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-2-<span>1</span></p>
+                    <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
+                    <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="b-catalog">
-              <a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/1.jpg" alt="">
+          </div>
+          <div class="b-catalog">
+            <a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/1.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/2.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/3.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/4.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a>
+          </div>
+          <p class="b-section__subtitle js-scroll-target" data-scrollto="6">Противовзрывные устройства и коробки</p>
+          <p class="b-section__text b-section__text_small-bottom">Противовзрывные устройства (МЗС и УЗС) предназначены для защиты вентиляционных систем от воздействия ударной волны большой длительности с давлением 0,3 — 10,0 кгс/см. Противовзрывные устройства автоматически, под действием ударной волны, перекрывают вентиляционные шахты или воздуховоды и обеспечивают защиту от проникания волны в убежище.&nbsp;<a href="#" class="arrowed-link">Подробнее</a></p>
+          <div class="b-what-is">
+            <span class="b-what-is__btn"><i class="icon-ask"></i><span class="dotted">Что обозначает индекс изделия?</span></span>
+            <div class="b-what-is__wrap">
+              <div class="b-what-is__content">
+                <div class="b-what-is__holder">
+                  <div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Расширительная камера.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-<span>2</span>-1</p>
+                    <p class="b-what-is__description">Первая цифра обозначает объем камеры в м2.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК-2-<span>1</span></p>
+                    <p class="b-what-is__description">Вторая цифра обозначает порядковый номер разработки конструкции изделия данного объема.</p>
+                  </div><div class="b-what-is__col">
+                    <p class="b-what-is__symbol">РК<span>Ф-6</span></p>
+                    <p class="b-what-is__description">Буква «Ф» обозначает наличие фильтров в камере, а цифра «6» показывает количество фильтров.</p>
+                  </div>
                 </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/2.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/3.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/4.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
-              </a><a href="#" class="b-catalog__item">
-                <div class="b-catalog__img">
-                  <img src="/../../f/i/catalog/5.jpg" alt="">
-                </div>
-                <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
-              </a>
+              </div>
             </div>
+          </div>
+          <div class="b-catalog">
+            <a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/1.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-7</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/2.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/3.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-9</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/4.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-3-5</p>
+            </a><a href="#" class="b-catalog__item">
+              <div class="b-catalog__img">
+                <img src="/../../f/i/catalog/5.jpg" alt="">
+              </div>
+              <p class="b-catalog__text">Дверь защитно-герметическая распашная ДУ-1-8</p>
+            </a>
           </div>
         </div>
       </section>

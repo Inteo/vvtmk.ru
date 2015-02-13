@@ -1338,6 +1338,22 @@ a:focus {
   background-image: url("../../f/i/icons.png");
   background-repeat: no-repeat
 }
+.icon-ham {
+	width: 20px;
+	height: 15px;
+	background-position: -44px -145px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	&_close {
+		width: 18px;
+		height: 17px;
+		background-position: -22px -144px;
+	}
+}
 .icon-contact {
 	background-position: 0 -33px;
 	width: 17px;
@@ -1532,7 +1548,7 @@ a:focus {
 	height: 100%;
 	margin: 0 0 -330px 0;
 	padding: 0;  
-	overflow: hidden;
+	/* overflow: hidden; */
 	min-width: 1000px;
 	&:after {  
 		content: '';
@@ -1646,11 +1662,18 @@ a:focus {
 		}
 	}
 	&__img {
-		top: -106px;
-		z-index: -1;
-		position: absolute;
-		left: 50%;
-		margin-left: -960px;
+		left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -106px;
+    width: 100%;
+    z-index: -1;
+		& img {
+			left: 50%;
+		  margin-left: -960px;
+		  position: relative;
+		  top: 0; 
+		}
 	}
 	&__title {
 		font: 50px/65px 'Open Sans', sans-serif;
@@ -1922,11 +1945,19 @@ a:focus {
 		padding-top: 0;
 	}
 	&__img {
-		position: absolute;
-		top: -105px;
-		left: 50%;
-		margin-left: -960px;
-		z-index: -1;
+		left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: -106px;
+    width: 100%;
+    z-index: -1;
+		& img {
+			position: absolute;
+			left: 50%;
+		  margin-left: -960px;
+		  position: relative;
+		  top: 0;
+		}
 	}
 	&__text {
 		display: inline-block;
@@ -2610,6 +2641,10 @@ a:focus {
 		&:hover .b-catalog__img {
 			border-color: #000000;
 		}
+		@media @tablet {
+			width: 170px;
+			margin-left: 20px;
+		}
 	}
 	&__img {
 		width: 210px;
@@ -2626,6 +2661,10 @@ a:focus {
 			top: 0;
 			bottom: 0;
 			margin: auto;
+		}
+		@media @tablet {
+			width: 170px;
+			height: 170px;
 		}
 	}
 	&__text {
@@ -2644,16 +2683,83 @@ a:focus {
 		content: '';
   	display: table;
   }
+  &__wrap {
+  	position: absolute;
+  	right: 0;
+  }
+  &__holder {
+  	position: relative;
+  }
   &__btn {
   	width: 50px;
   	height: 50px;
   	background: #f70000;
   	cursor: pointer;
   	position: absolute;
-  	right: 0;
+  	z-index: 10;
+		left: -50px;
   }
   &__content {
+  	max-width: 0;
+  	overflow: hidden;
   	background: #f3f6f8;
+  	display: inline-block;
+  	vertical-align: top;
+
+  	.transition(max-width, .5s, ease);
+  	& ul {
+  		list-style: none;
+  		padding: 20px 25px;
+  		width: 400px;
+  	}
+  }
+  &__item {
+		margin-bottom: 10px;
+		line-height: 24px;
+		padding-left: 15px;
+		& span {
+			font-size: 14px;
+			cursor: pointer;
+			border-bottom: 1px dotted;
+			color: #f70000;
+			&.active {
+				font-weight: bold;
+				color: #000;
+				cursor: default;
+				border: none;
+			}
+			&.active i:before {
+				background: #000;
+			}
+		}
+		&_section {
+			padding: 0;
+			margin-bottom: 15px;
+			& span {
+				font-size: 16px;
+				color: #000;
+			}
+			& i {
+				display: none;
+			}
+		}
+		& i {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 1px;
+				top: 50%;
+				left: -15px;
+				background: #f70000;
+			}
+		}
+  }
+  &_active {
+  	& .b-ham-menu__content {
+  		max-width: 400px;
+  	}
   }
 }
 .b-footer {  
