@@ -19,6 +19,14 @@ $(function(){
     var theIds = theId.match(/\w+|"[^"]+"/g);
     var str = theIds.join(' ');
     var num = parseInt(str.replace(/\D+/g, ""));
-    $.scrollTo($("#scroll-to-"+num), 350);
+    $.scrollTo($("#scroll-to-"+num), 350, {offset: -50});
+  });
+  $(".b-what-is__btn").click(function(){
+  	$(this).closest(".b-what-is").find(".b-what-is__content").toggleClass("b-what-is__content_active")
   });
 });
+$.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
