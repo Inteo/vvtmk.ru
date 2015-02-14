@@ -1363,6 +1363,11 @@ a:focus {
 		background-position: -40px -161px;
 	}
 }
+.icon-marker {
+  width: 30px;
+  height: 30px;
+  background-position: 0 -241px;
+}
 .icon-order {
 	width: 15px;
 	height: 15px;
@@ -2034,7 +2039,12 @@ a:focus {
 		vertical-align: top;
 		width: 50%;
 		padding-top: 15px;
-		list-style: none;
+    & ul {
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+    }
 		& li {
 			margin-bottom: 10px;
 			& a {
@@ -2145,6 +2155,9 @@ a:focus {
 }
 .b-section {
 	padding-top: 60px;
+  &_top_35 {
+    padding-top: 35px;
+  }
 	&_gray {
 		padding-top: 70px;
 		background: #f3f6f8;
@@ -2161,6 +2174,9 @@ a:focus {
 		&_bottom_15 {
 			margin-bottom: 15px;
 		}
+    &_bottom_40 {
+      margin-bottom: 40px;
+    }
 	}
 	&__subtitle {
 		font: 30px 'Open Sans', sans-serif;
@@ -2171,6 +2187,15 @@ a:focus {
 		&_small-bottom {
 			margin-bottom: 20px;
 		}
+    &_bottom_80 {
+      margin-bottom: 80px;
+    }
+    &_bottom_40 {
+      margin-bottom: 40px;
+    }
+    &_bottom_30 {
+      margin-bottom: 30px;
+    }
 	}
 }
 .b-list {
@@ -2931,6 +2956,80 @@ a:focus {
 			line-height: 22px;
 		}
 	}
+}
+.b-hint {
+  border: 3px solid #000;
+  padding: 35px;
+  margin-bottom: 40px;
+  &__text {
+    font-size: 20px;
+    line-height: 35px;
+    & span {
+      font-weight: bold;
+    }
+  }
+}
+.b-marked {
+  margin-bottom: 20px;
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.333333%;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+  &__text {
+    max-width: 82%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__title {
+    font: bold 20px/30px 'Open Sans', sans-serif;
+  }
+  &__description {
+    font-size: 14px;
+  }
+  & i {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+  }
+}
+.b-imged {
+  margin-left: -75px;
+  @media @tablet {
+    margin-left: -40px;
+  }
+  &__item {
+    width: 340px;
+    margin-left: 75px;
+    margin-bottom: 30px;
+    display: inline-block;
+    vertical-align: top;
+    @media @tablet {
+      width: 280px;
+      margin-left: 40px;
+    }
+  }
+  &__pict {
+    border-bottom: 3px solid #f70000;
+    margin-bottom: 25px;
+    min-height: 150px;
+    position: relative;
+    & img {
+      max-width: 60%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__title {
+    font: 30px/30px 'Open Sans', sans-serif;
+    margin-bottom: 25px;
+  }
+  &__text {
+
+  }
 }
 .b-footer {  
 	height: 330px;
