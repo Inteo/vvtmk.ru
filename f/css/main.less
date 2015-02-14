@@ -2043,7 +2043,8 @@ a:focus {
       list-style: none;
       display: inline-block;
       vertical-align: top;
-      margin-right: 20px;
+      padding-right: 20px;
+      width: 50%;
     }
 		& li {
 			margin-bottom: 10px;
@@ -2256,10 +2257,21 @@ a:focus {
 	} 
 }
 .b-tabs {
+  &__select {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 40px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 3px solid #e8eef2;
+    margin-left: 30px;
+  }
 	&__control {
 		list-style: none;
 		padding: 0;
-		margin-bottom: 45px;
+		margin-bottom: 25px;
 	}
 	&__btn {
 		position: relative;
@@ -2269,6 +2281,7 @@ a:focus {
 		border: 3px solid #f3f6f8;
 		padding: 0 17px 3px;
 		margin-right: 5px;
+    margin-bottom: 20px;
 		& span {
 			color: @red;
 			border-bottom: 1px dotted;
@@ -2307,6 +2320,11 @@ a:focus {
 			}
 		}
 	}
+  &__control {
+    &_light .b-tabs__btn:not(.b-tabs__btn_active) span {
+      font-weight: normal;
+    }
+  }
 	&__content {
 		display: none;
 		min-height: 300px;
@@ -3029,6 +3047,117 @@ a:focus {
   }
   &__text {
 
+  }
+}
+.b-achiv {
+  padding-top: 20px;
+  background: #e8eef2;
+  margin-bottom: 30px;
+  &__holder {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50px;
+      bottom: -20px;
+      width: 0;
+      border: 20px solid transparent;
+      border-top: 20px solid #e8eef2;
+      border-bottom: none;
+    }
+  }
+  &__table {
+    display: table;
+    width: 100%;
+  }
+  &__row {
+    display: table-row;
+  }
+  &__item {
+    display: table-cell;
+    padding-right: 30px;
+  }
+  &__sym {
+    display: inline-block;
+    vertical-align: top;
+    font: 50px/50px 'Open sans', sans-serif;
+    @media @tablet {
+      font-size: 35px;
+    }
+  }
+  &__text {
+    width: 90%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__value {
+    font: 50px/50px 'Open sans', sans-serif;
+    color: #f70000;
+    margin: 0;
+    width: 10%;
+    white-space: nowrap;
+    word-wrap: normal;
+    & span {
+      font: bold 16px 'Nodo sans', sans-serif;
+    }
+    @media @tablet {
+      font-size: 35px;
+    }
+  }
+  &__description {
+    padding-left: 3px;
+    line-height: 26px;
+  }
+}
+.b-projects {
+  margin-left: -40px;
+  @media @tablet {
+    margin-left: -20px;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 570px;
+    height: 300px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    padding: 40px;
+    text-decoration: none;
+    &:hover .b-projects__title span {
+      color: #f70000;
+    }
+    @media @tablet {
+      width: 450px;
+      height: 240px;
+      margin-left: 20px;  
+      margin-bottom: 25px;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  &__title {
+    margin-bottom: 20px;
+    max-width: 75%;
+    & span {
+      font: 30px/40px 'Open sans', sans-serif;
+      border-bottom: 1px solid #f70000;
+      color: #fff;
+      @media @tablet {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+  &__address {
+    font-size: 14px;
+    line-height: 14px;  
+    color: #fff;
   }
 }
 .b-footer {  
