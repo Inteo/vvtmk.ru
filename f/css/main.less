@@ -2800,12 +2800,12 @@ a:hover .icon-download {
 	}
 }
 .b-catalog {
-	margin-left: -30px;
+	margin-left: -31px;
 	margin-bottom: 30px;
 	&__item {
 		display: inline-block;
 		vertical-align: top;
-		margin-left: 30px;
+		margin-left: 32px;
 		margin-bottom: 30px;
 		width: 210px;
 		&:hover .b-catalog__img {
@@ -2871,6 +2871,11 @@ a:hover .icon-download {
   	position: absolute;
   	z-index: 10;
 		left: -50px;
+    @media @tablet {
+      width: 40px;
+      height: 40px;
+      left: -40px;
+    }
   }
   &__content {
   	max-width: 0;
@@ -3149,7 +3154,7 @@ a:hover .icon-download {
   }
 }
 .b-achiv {
-  padding-top: 20px;
+  padding-top: 10px;
   background: #e8eef2;
   margin-bottom: 30px;
   &__holder {
@@ -3163,6 +3168,9 @@ a:hover .icon-download {
       border: 20px solid transparent;
       border-top: 20px solid #e8eef2;
       border-bottom: none;
+    }
+    @media @tablet {
+      padding: 10px 40px 20px;
     }
   }
   &__table {
@@ -3336,6 +3344,146 @@ a:hover .icon-download {
 		color: #fff;
 		margin-bottom: 40px;
 	}
+}
+.b-managament {
+  margin-bottom: 40px;
+  &__photo {
+    float: left;
+    width: 210px;
+    height: 300px;
+    border: 3px solid #f3f6f8;
+    position: relative;
+    & img {
+      width: 80%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__text-wrap {
+    overflow: hidden;
+    padding-left: 30px;
+  }
+  &__text {
+    background: #f3f6f8;
+    padding: 40px;
+    height: 300px;
+    position: relative;
+    font-style: italic;
+    &:before {
+      position: absolute;
+      content: '';
+      left: -20px;
+      top: 40px;
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-right: 20px solid #f3f6f8;
+      border-left: none;
+      border-top: none;
+    }
+    @media @tablet {
+      font-size: 14px;
+      padding: 25px 40px;
+    }
+  }
+  &__sign {
+    text-align: right;
+    position: relative;
+    padding-top: 25px;
+    padding-right: 220px;
+    line-height: 20px;
+    font-style: normal;
+    &:before {
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      height: 1px;
+      top: 42px;
+      background: #000;
+      @media @tablet {
+        width: 120px;
+      }
+    }
+    @media @tablet {
+      font-size: 14px;
+      padding-top: 15px;
+      padding-right: 120px;
+    }
+    & img {
+      position: absolute;
+      right: 50px;
+      top: -10px;
+      max-width: 115px;
+      @media @tablet {
+        max-width: 80px;
+        right: 15px;
+        top: 0;
+      }
+    }
+  }
+  &__post {
+    font-size: 14px;
+    font-style: italic; 
+    margin-right: 10px;
+  }
+  &__name {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+}
+.b-employees {
+  margin-left: -30px;
+  @media @tablet {
+    margin-left: -20px;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 210px;
+    margin-left: 32px;
+    margin-bottom: 30px;
+    @media @tablet {
+      width: 165px;
+      margin-left: 23px;
+    }
+  }
+  &__photo {
+    width: 210px;
+    height: 300px;
+    border: 3px solid #f3f6f8;
+    position: relative;
+    margin-bottom: 10px;
+    @media @tablet {
+      width: 165px;
+      height: 230px;
+    }
+    & img {
+      width: 80%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
+  &__post {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 .b-footer {  
 	height: 330px;
