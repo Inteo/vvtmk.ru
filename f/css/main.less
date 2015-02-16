@@ -446,6 +446,7 @@ ul,
 ol {
   margin-top: 0;
   margin-bottom: 10px;
+  margin-left: 0;
 }
 ul ul,
 ol ul,
@@ -1372,9 +1373,10 @@ a:focus {
 	width: 20px;
 	height: 15px;
 	background-position: -66px -145px;
-	margin-right: 15px;
+	margin: -2px 15px 0 -8px;
 }
-.iconized-link:hover .icon-order {
+.iconized-link:hover .icon-order,
+a:hover .icon-order {
 	background-position: -86px -145px;
 }
 .icon-lens {
@@ -1423,6 +1425,7 @@ a:focus {
 	}
 }
 .iconized-link:hover .icon-venting,
+a:hover .icon-venting,
 .iconized-link.active .icon-venting {
 	background-position: -85px -40px;
 	&-small {
@@ -1440,6 +1443,7 @@ a:focus {
 	}
 }
 .iconized-link:hover .icon-condit,
+a:hover .icon-condit,
 .iconized-link.active .icon-condit {
 	background-position: -124px -40px;
 	&-small {
@@ -1457,6 +1461,7 @@ a:focus {
 	}
 }
 .iconized-link:hover .icon-civ-def,
+a:hover .icon-civ-def,
 .iconized-link.active .icon-civ-def {
 	background-position: -172px -40px;
 	&-small {
@@ -1474,6 +1479,7 @@ a:focus {
 	}
 }
 .iconized-link:hover .icon-chute,
+a:hover .icon-chute,
 .iconized-link.active .icon-chute {
 	background-position: -212px -40px;
 	&-small {
@@ -1491,6 +1497,7 @@ a:focus {
 	}
 }
 .iconized-link:hover .icon-thermal,
+a:hover .icon-thermal,
 .iconized-link.active .icon-thermal {
 	background-position: -251px -40px;
 	&-small {
@@ -1503,6 +1510,11 @@ a:focus {
 	background-position: 0 -121px;
 	margin: -2px 20px 0 -5px;
 }
+.icon-download-big {
+	width: 30px;
+	height: 30px;
+	background-position: -40px -201px;
+}
 .icon-ask {
 	width: 20px;
 	height: 20px;
@@ -1510,7 +1522,8 @@ a:focus {
 	margin-top: -2px;
 	margin-right: 7px;
 }
-.iconized-link:hover .icon-download {
+.iconized-link:hover .icon-download,
+a:hover .icon-download {
 	background-position: 0 -141px;
 }
 .arrowed-link {
@@ -1563,6 +1576,52 @@ a:focus {
 	}
 
 }
+.b-select-input {
+	width: auto !important;
+	& button {
+		border: 3px solid #e8eef2;
+		border-radius: 0 !important;
+		width: 90px !important;
+		background: #fff;
+		box-shadow: none !important;
+		&:hover {
+			background: #fff;
+		}
+		& .filter-option {
+			font-weight: bold;
+			padding: 0 0 1px;
+		}
+		& .caret {
+			border-top-color: #f70000;
+		}
+		&:active,
+		&:focus {
+			box-shadow: none !important;
+			background: #fff !important;
+		}
+	}
+	&.open {
+		& button {
+			background: #fff !important;
+			box-shadow: none !important;
+		}
+	}
+	.dropdown-menu {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		background: #e8eef2;
+		margin: 0;
+		& li a {
+			background: #e8eef2 !important;
+			font-weight: bold;
+			&:hover,
+			&:focus {
+				color: @red;
+			}
+		}
+	}
+}
 .rub {
   font-family: 'PT Sans', sans-serif;
 }
@@ -1587,6 +1646,7 @@ a:focus {
 	max-width: 1280px;
 	margin: 0 auto;
 	padding: 30px 50px;
+	position: relative;
 	&_unpad {
 		padding: 0;
 	}
@@ -2018,6 +2078,9 @@ a:focus {
 		width: 50%;
 		padding-top: 15px;
 		padding-right: 50px;
+		@media @tablet {
+			width: 55%;
+		}
 	}
 	&__title {
 		font: 50px/60px 'Open Sans', sans-serif;
@@ -2043,13 +2106,19 @@ a:focus {
 		vertical-align: top;
 		width: 50%;
 		padding-top: 15px;
+		@media @tablet {
+			width: 45%;
+		}
     & ul {
       list-style: none;
       display: inline-block;
       vertical-align: top;
       padding-right: 20px;
-      width: 50%;
+      padding-left: 30px;
     }
+    &_half ul {
+			width: 50%;
+		}
 		& li {
 			margin-bottom: 10px;
 			& a {
@@ -2264,13 +2333,7 @@ a:focus {
   &__select {
     display: inline-block;
     vertical-align: top;
-    line-height: 40px;
-    height: 38px;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 5px 10px;
-    border: 3px solid #e8eef2;
-    margin-left: 30px;
+    margin-left: 30px !important;
   }
 	&__control {
 		list-style: none;
@@ -2792,7 +2855,10 @@ a:focus {
   }
   &__wrap {
   	position: absolute;
-  	right: 0;
+  	right: -50px;
+  	@media @tablet {
+  		right: -40px;
+  	}
   }
   &__holder {
   	position: relative;
@@ -2930,7 +2996,7 @@ a:focus {
 			padding: 30px;
 			position: -webkit-sticky;
 		  position: sticky;
-		  top: 0;
+		  top: 40px;
 			cursor: pointer;
 			& img {
 				width: 100%;
@@ -2973,7 +3039,7 @@ a:focus {
 			white-space: nowrap;
 			word-wrap: normal;
 			& a {
-				padding: 3px 18px 4px 10px;
+				padding: 3px 18px 4px 18px;
 			}
 			
 		}
@@ -3005,7 +3071,7 @@ a:focus {
     vertical-align: top;
     width: 33.333333%;
     padding-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   &__text {
     max-width: 82%;
@@ -3013,15 +3079,30 @@ a:focus {
     vertical-align: top;
   }
   &__title {
-    font: bold 20px/30px 'Open Sans', sans-serif;
+    font: 20px/30px 'Open Sans', sans-serif;
   }
   &__description {
     font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  &__link {
+  	font-size: 14px;
+    line-height: 26px;
   }
   & i {
     display: inline-block;
     vertical-align: top;
     margin-right: 15px;
+  }
+  &__num {
+  	width: 30px;
+  	height: 30px;
+  	border: 3px solid #f70000;
+  	border-radius: 50%;
+  	text-align: center;
+  	font: 800 16px/24px 'Open Sans', sans-serif;
+  	color: #f70000;
   }
 }
 .b-imged {
@@ -3036,14 +3117,17 @@ a:focus {
     display: inline-block;
     vertical-align: top;
     @media @tablet {
-      width: 280px;
+      width: 277px;
       margin-left: 40px;
     }
+    &_empty .b-imged__pict {
+			border: none;
+	  }
   }
   &__pict {
     border-bottom: 3px solid #f70000;
     margin-bottom: 25px;
-    min-height: 150px;
+    min-height: 125px;
     position: relative;
     & img {
       max-width: 60%;
@@ -3058,6 +3142,10 @@ a:focus {
   }
   &__text {
 
+  }
+  &__btn {
+  	position: absolute;
+  	bottom: 0;
   }
 }
 .b-achiv {
@@ -3086,7 +3174,7 @@ a:focus {
   }
   &__item {
     display: table-cell;
-    padding-right: 30px;
+    padding-right: 50px;
   }
   &__sym {
     display: inline-block;
@@ -3134,7 +3222,7 @@ a:focus {
     margin-bottom: 50px;
     position: relative;
     padding: 40px;
-    text-decoration: none;
+    text-decoration: none !important;
     &:hover .b-projects__title span {
       color: #f70000;
     }
@@ -3153,7 +3241,7 @@ a:focus {
     z-index: -1;
   }
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     max-width: 75%;
     & span {
       font: 30px/40px 'Open sans', sans-serif;
@@ -3205,17 +3293,48 @@ a:focus {
 	& th {
 		text-align: right;
 		font-size: 14px;
+		padding-bottom: 12px;
 	}
 	& tr {
 		line-height: 16px;
 	}
 	& td {
-		padding-top: 23px;
+		padding: 12px 0;
 		border-bottom: 1px dotted #d5e0e7;
 		&:first-child {
 			width: 25%;
 			text-align: left;
 		}
+	}
+}
+.b-projects-slider {
+	margin: 0 -50px 40px;
+	position: relative;
+	@media @tablet {
+		margin: 0 -40px;
+	}
+	&__text {
+		padding: 80px 100px;
+		max-width: 30%;
+		@media @tablet {
+			max-width: 40%;
+			padding: 35px 70px;
+		}
+	}
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	&__title {
+		font: 30px/40px 'Open sans', sans-serif;
+		color: #fff;
+		margin-bottom: 10px;
+	}
+	&__address {
+		color: #fff;
+		margin-bottom: 40px;
 	}
 }
 .b-footer {  

@@ -7,12 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link rel="stylesheet" href="f/css/bootstrap-select.css">
+  <link rel="stylesheet" href="f/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="f/css/bootstrap.min.css">
   <link rel="stylesheet" href="f/css/main.css">
   <link rel="shortcut icon" href="favicon.ico">
   <script src="f/js/jquery-1.11.2.min.js"></script>
   <script src="f/js/jquery.scrollTo.min.js"></script>
-  <script src="bootstrap-select.min.js"></script>
+  <script src="f/js/bootstrap-select.min.js"></script>
   <script src="f/js/bootstrap.min.js"></script>
   <script src="f/js/common.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,700,italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
@@ -21,7 +22,9 @@
   <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&subset=all" rel="stylesheet" type="text/css" />
   <script>
   $(document).ready(function(){
-    /*$('.selectpicker').selectpicker();*/
+    $(".b-tabs__select").selectpicker({
+      style: "b-select-input"
+    });
   });
   </script>
 </head>
@@ -62,7 +65,7 @@
           <div class="b-top-banner__text">
             <p class="b-top-banner__description">Верхневолжский ТМК – одно из ведущих предприятий в строительной отрасли, занимающихся изготовлением и монтажом систем промышленной вентиляции и кондиционирования воздуха.</p>
             <a href="#" class="b-top-banner__btn tmk-btn tmk-btn_light">Подробнее</a>
-          </div><div class="b-top-banner__links">
+          </div><div class="b-top-banner__links b-top-banner__links_half">
 	          <ul>
 	            <li><a href="#"><i></i>Вентиляция</a></li>
 	            <li><a href="#"><i></i>Кондиционирование</a></li>
@@ -110,7 +113,7 @@
               <div class="b-tabs__btn"><span>Гражданская оборона</span></div>
               <div class="b-tabs__btn"><span>Мусоропроводы</span></div>
               <div class="b-tabs__btn"><span>Тепловое оборудование</span></div>
-              <select class="selectpicker b-tabs__select">
+              <select class="b-select-input b-tabs__select">
                 <option>2010</option>
                 <option>2011</option>
                 <option>2012</option>
