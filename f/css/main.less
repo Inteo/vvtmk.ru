@@ -1358,6 +1358,24 @@ a:focus {
 	padding: 1px 6px;
 	font-size: 10px;
 }
+.icon-prev {
+	width: 12px;
+	height: 19px;
+	background-position: -2px -313px;
+	margin-right: 10px;
+}
+a:hover .icon-prev {
+	background-position: -2px -292px;
+}
+.icon-next {
+	width: 12px;
+	height: 19px;
+	background-position: -16px -313px;
+	margin-left: 10px;
+}
+a:hover .icon-next {
+	background-position: -16px -292px;
+}
 .iconize-back {
 	margin-left: 60px;
 	&:before {
@@ -1369,6 +1387,54 @@ a:focus {
 	}
 	&:hover:before {
 		background-position: -40px -161px;
+	}
+}
+.icon-prev2,
+.icon-next2 {
+	width: 35px;
+	position: relative;
+	height: 35px;
+	outline: 3px solid #f70000;
+	background: none;
+	&:before {
+		content: 	'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background: url(../../f/i/icons.png);
+	}
+}
+.icon-prev2 {
+	margin-right: 15px;
+	&:before {
+		width: 12px;
+		height: 19px;
+		background-position: -2px -292px;
+	}
+}
+.icon-next2 {
+	margin-left: 15px;
+	&:before {
+		width: 12px;
+		height: 19px;
+		background-position: -16px -292px;
+	}
+}
+a:hover .icon-prev2,
+a:hover .icon-next2 {
+	background: #f70000;
+}
+a:hover .icon-prev2 {
+	&:before {
+		background-position: -2px -313px;
+	}
+}
+a:hover .icon-next2 {
+	&:before {
+		background-position: -16px -313px;
 	}
 }
 .icon-marker {
@@ -1661,6 +1727,9 @@ a:hover .icon-download {
 	margin: 0 auto;
 	padding: 30px 50px;
 	position: relative;
+	&_top_0 {
+		padding-top: 0;
+	}
 	&_unpad {
 		padding: 0;
 	}
@@ -2109,6 +2178,9 @@ a:hover .icon-download {
 		&_bottom_40 {
 			margin-bottom: 40px;
 		}
+		@media @tablet {
+			font-size: 40px;
+		}
 	}
 	&__description {
 		font-size: 16px;
@@ -2270,6 +2342,9 @@ a:hover .icon-download {
 	&__subtitle {
 		font: 30px 'Open Sans', sans-serif;
 		margin-bottom: 30px;
+		&_bottom_20 {
+			margin-bottom: 20px;
+		}
 	}
 	&__text {
 		margin-bottom: 55px;
@@ -2279,12 +2354,21 @@ a:hover .icon-download {
     &_bottom_80 {
       margin-bottom: 80px;
     }
+    &_bottom_70 {
+      margin-bottom: 70px;
+    }
     &_bottom_40 {
       margin-bottom: 40px;
     }
     &_bottom_30 {
       margin-bottom: 30px;
     }
+	}
+	&__string {
+		margin-bottom: 10px;
+		& span {
+			font-weight: bold;
+		}
 	}
 }
 .b-list {
@@ -3083,7 +3167,7 @@ a:hover .icon-download {
   }
 }
 .b-marked {
-  margin-bottom: 20px;
+  
   &__item {
     display: inline-block;
     vertical-align: top;
@@ -3150,7 +3234,7 @@ a:hover .icon-download {
   }
   &__pict {
     border-bottom: 3px solid #f70000;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     min-height: 125px;
     position: relative;
     & img {
@@ -3160,7 +3244,7 @@ a:hover .icon-download {
     }
   }
   &__title {
-    font: 30px/30px 'Open Sans', sans-serif;
+    font: 30px/40px 'Open Sans', sans-serif;
     margin-bottom: 25px;
   }
   &__text {
@@ -3169,6 +3253,10 @@ a:hover .icon-download {
   &__btn {
   	position: absolute;
   	bottom: 0;
+  	& a {
+  		font-size: 16px;
+  		padding: 7px 20px;
+  	}
   }
 }
 .b-achiv {
@@ -3201,6 +3289,8 @@ a:hover .icon-download {
   &__item {
     display: table-cell;
     padding-right: 45px;
+    word-spacing: normal;
+    white-space: nowrap;
   }
   &__sym {
     display: inline-block;
@@ -3232,6 +3322,7 @@ a:hover .icon-download {
   &__description {
     padding-left: 3px;
     line-height: 26px;
+    white-space: normal;
   }
 }
 .b-projects {
@@ -3336,21 +3427,28 @@ a:hover .icon-download {
 .b-projects-slider {
 	margin: 0 -50px 40px;
 	position: relative;
+	&_captioned {
+		margin-bottom: 0;
+	}
+	&_captioned .fotorama__arr {
+		margin-top: -85px;
+	}
 	@media @tablet {
 		margin: 0 -40px;
 	}
 	&__text {
 		padding: 80px 100px;
 		max-width: 30%;
+		position: absolute;
+		left: 0;
+		top: 0;
 		@media @tablet {
 			max-width: 40%;
 			padding: 35px 70px;
 		}
 	}
 	&__img {
-		position: absolute;
-		left: 0;
-		top: 0;
+		width: 100%;
 		z-index: -1;
 	}
 	&__title {
@@ -3361,6 +3459,27 @@ a:hover .icon-download {
 	&__address {
 		color: #fff;
 		margin-bottom: 40px;
+	}
+	&__caption {
+		background: #f3f6f8;
+		position: relative;
+		padding: 30px 45px 20px;
+		font-style: italic;
+		min-height: 70px;
+		border-top: 3px solid #f70000;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50px;
+			border: 5px solid transparent;
+			border-top: 5px solid #f70000;
+			border-bottom: none;
+			width: 0;
+		}
+		& span {
+			font-weight: bold;
+		}
 	}
 }
 .b-managament {
@@ -3545,6 +3664,49 @@ a:hover .icon-download {
 	overflow: hidden;
 	& li {
 		margin-bottom: 10px;
+	}
+}
+.b-navig {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	&__link {
+		position: absolute;
+		left: 50px;
+		bottom: 10px;
+		width: 50%;
+		&_right {
+			right: 50px;
+			left: auto;
+			text-align: right;
+		}
+		& a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 14px;
+			&:hover {
+				color: #f60000;
+			}
+		}
+		& span {
+			border-bottom: 1px solid #f60000;
+		}
+	}
+	&_bordered {
+		border-top: 4px solid #000;
+		position: relative;
+		bottom: auto;
+		padding: 30px;
+		& a {
+			color: #f70000;
+		}
+		& .b-navig__link {
+			left: 0;
+			&_right {
+				right: 0;
+				left: auto;
+			}
+		}
 	}
 }
 .b-footer {  

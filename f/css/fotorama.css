@@ -433,7 +433,7 @@ transform: translate3d(0, 0, 0) */
 	background-position: -2px -313px;
 }
 .fotorama__arr--next {
-  right: 1px;
+  right: 0;
 }
 .fotorama__arr--next:before {
   background-position: -16px -292px;
