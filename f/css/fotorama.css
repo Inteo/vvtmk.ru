@@ -411,8 +411,7 @@ transform: translate3d(0, 0, 0) */
 .fotorama__arr:hover {
   background: #f50c00;
 }
-.fotorama__arr:before,
-.fotorama__arr:after {
+.fotorama__arr:before {
 	position: absolute;
 	content: '';
 	left: 0;
@@ -420,45 +419,27 @@ transform: translate3d(0, 0, 0) */
 	top: 0;
 	bottom: 0;
 	margin: auto;
-	height: 0;
-	width: 0;
-	border: 10px solid transparent;
+	height: 19px;
+	width: 12px;
+  background: url(../../f/i/icons.png);
 }
 .fotorama__arr--prev {
   left: 0;
 }
 .fotorama__arr--prev:before {
-	border-right: 10px solid #f50c00;
-  border-left: none;
+	background-position: -2px -292px;
 }
 .fotorama__arr--prev:hover:before {
-	border-right-color: #fff;
-}
-.fotorama__arr--prev:after {
-	border-right: 10px solid #fff;
-  border-left: none;
-  left: 8px;
-}
-.fotorama__arr--prev:hover:after {
-	border-right-color: #f50c00;
+	background-position: -2px -313px;
 }
 .fotorama__arr--next {
   right: 1px;
 }
 .fotorama__arr--next:before {
-	border-left: 10px solid #f50c00;
-  border-right: none;
+  background-position: -16px -292px;
 }
 .fotorama__arr--next:hover:before {
-	border-left-color: #fff;
-}
-.fotorama__arr--next:after {
-	border-left: 10px solid #fff;
-  border-right: none;
-  right: 8px;
-}
-.fotorama__arr--next:hover:after {
-	border-left-color: #f50c00;
+	background-position: -16px -313px;
 }
 .fotorama__arr--disabled {
   pointer-events: none;
