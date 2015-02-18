@@ -1358,6 +1358,12 @@ a:focus {
 	padding: 1px 6px;
 	font-size: 10px;
 }
+.icon-map-marker {
+	width: 11px;
+	height: 17px;
+	background-position: -34px -243px;
+	margin-right: 5px;
+}
 .icon-prev {
 	width: 12px;
 	height: 19px;
@@ -1480,11 +1486,31 @@ a:hover .icon-order {
 		background-position: -22px -144px;
 	}
 }
+.icon-close {
+	width: 18px;
+	height: 17px;
+	background-position: -33px -267px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.iconized-link:hover .icon-close {
+	width: 18px;
+	height: 17px;
+	background-position: -22px -144px;
+}
 .icon-contact {
-	background-position: 0 -33px;
+	background-position: 0 -32px;
 	width: 17px;
 	height: 12px;
 	margin-right: 5px;
+	margin-top: -2px;
+}
+a:hover .icon-contact {
+	background-position: 0 -48px;
 }
 .icon-star {
 	width: 19px;
@@ -2179,6 +2205,9 @@ a:hover .icon-download {
 		&_bottom_40 {
 			margin-bottom: 40px;
 		}
+		&_bottom_35 {
+			margin-bottom: 35px;
+		}
 		@media @tablet {
 			font-size: 40px;
 		}
@@ -2251,9 +2280,72 @@ a:hover .icon-download {
 			top: -110px;
 		}
 	}
+	&_big {
+		height: 595px;
+	}
 	&_history {
 		& .b-top-banner__img img {
 			top: 0;
+		}
+	}
+	&__office {
+		display: inline-block;
+		vertical-align: top;
+		width: 62%;
+		padding-right: 30px;
+	}
+	&__prom {
+		display: inline-block;
+		vertical-align: top;
+		width: 38%;
+	}
+	&__subtitle {
+		font: 20px/30px 'Open Sans', sans-serif;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	&__address {
+		color: #fff;
+		margin-bottom: 5px;
+	}
+	&__look {
+		text-decoration: none;
+		cursor: pointer;
+		
+		& span {
+			color: #fff;
+			font-style: italic;
+			font-size: 14px;
+			border-bottom: 1px dotted @red;
+			line-height: 16px;
+			display: inline-block;
+			margin-bottom: 25px;
+		}
+		&:hover span {
+			color: @red;
+		}
+	}
+	&__department {
+		display: inline-block;
+		vertical-align: top;
+		white-space: nowrap;
+		word-wrap: normal;
+		margin-bottom: 35px;
+		width: 28%;
+		&-title {
+			color: #fff;
+			font-weight: bold;
+		}
+		&-phone {
+			color: #fff;
+			margin-bottom: 5px;
+			& span {
+				color: @red;
+				font-weight: bold;
+			}
+		}
+		&-email {
+			color: #fff;			
 		}
 	}
 }
@@ -4068,6 +4160,81 @@ a:hover .icon-download {
 			}
 		}
 	}
+}
+.b-map {
+	padding: 0;
+	min-height: 500px;
+}
+.popup__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  &:hover {
+  	background: #f70000;
+  }
+}
+.b-popup {
+	padding: 50px;
+	text-align: center;
+	&__title {
+		font: 40px/40px 'Open sans', sans-serif;
+		margin-bottom: 40px;
+	}
+	&__btn {
+		padding: 3px 15px;
+		i {
+			margin-right: 18px;
+			margin-left: -5px;
+		}
+		&-wrap {
+			padding-top: 40px;
+		}
+	}
+}
+.input {
+	width: 100%;
+	border: 3px solid #e8eef2;
+	margin-bottom: 20px;
+	font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  color: #000;
+	padding: 0 10px;
+	&:focus {
+		border-color: #000;
+	}
+	&_incorrect {
+		color: @red;
+    background:url(../../f/i/incorrect.png) no-repeat 98% 50%;
+	}
+}
+.input::-moz-placeholder {
+	opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+.input:-moz-placeholder {
+	opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+.input:-ms-input-placeholder {
+	opacity: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+.input::-webkit-input-placeholder {
+	opacity: 1;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
 }
 .b-footer {  
 	height: 330px;
