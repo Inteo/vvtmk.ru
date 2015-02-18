@@ -61,3 +61,18 @@ $(window).on('scroll', function() {
 		    }),
     		$('.js-scroll-link').removeClass('active').filter('[data-scrollto="' + anchor + '"]').addClass('active');
 }).trigger('scroll');
+
+$(window).on('scroll', function() {
+	var winTop = $(document).scrollTop() + $( window ).height() / 2;
+	$(".b-history__row").each(function(){
+		var top = $(this).offset().top;
+		var sepHeight = winTop - top;
+		if(winTop > top) {
+			$(this).addClass("b-history__row_active");
+		}
+		else {
+			$(this).removeClass("b-history__row_active");
+		}
+		$(this).find(".b-history__sep_fill").height(sepHeight);
+	});
+});

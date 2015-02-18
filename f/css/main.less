@@ -2251,6 +2251,11 @@ a:hover .icon-download {
 			top: -110px;
 		}
 	}
+	&_history {
+		& .b-top-banner__img img {
+			top: 0;
+		}
+	}
 }
 .b-menu {
 	list-style: none;
@@ -3938,6 +3943,131 @@ a:hover .icon-download {
 		}
 	}
 	
+}
+.b-history {
+	display: table;
+	width: 100%;
+	padding-top: 10px;
+	&__row {
+		display: table-row;
+		margin-bottom: 30px;
+	}
+	&__cell {
+		display: table-cell;
+		position: relative;
+	}
+	&__img {
+		background: #fff;
+		padding-bottom: 15px;
+		margin-bottom: 170px;
+		& img {
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+			margin-bottom: 10px;
+			margin-top: -15px;
+			filter: gray;
+			filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+			@media @tablet {
+				width: 100%;
+			}
+		}
+		&_top_0 {
+			& img {
+				margin-top: 0;
+			}
+		}
+	}
+	&__row_active &__img img{
+		filter: none;
+		-webkit-filter: none;
+	}
+	&__line {
+		width: 450px;
+		text-align: center;
+		overflow: hidden;
+		@media @tablet {
+			width: 350px;
+		}
+	}
+	&__sep {
+		position: absolute;
+		top: 10px;
+		bottom: 20px;
+		width: 3px;
+		left: 50%;
+		margin-left: -1px;
+		border-left: 3px dotted #000;
+		z-index: -1;
+		&_fill {
+			border-left-color: #f70000;
+			height: 0;
+			max-height: 100%;
+			margin-top: -28px;
+			.transition(height, .1s, ease-in-out);
+			background: #fff;
+		}
+	}
+	&__row_last &__sep {
+		display: none;
+	}
+	&__year {
+		background: #fff;
+		font: 40px/40px 'Open sans', sans-serif;
+		padding-bottom: 45px;
+		margin: 0;
+		margin-left: 20px;
+		& span {
+			font-size: 16px;
+		}
+	}
+	&__row_active &__year {
+		color: #f70000;
+	}
+	&__text {
+		padding-left: 50px;
+		padding-bottom: 150px;
+	}
+	&__row_last &__text {
+		padding-bottom: 50px;
+	}
+	&__row_last &__img {
+		margin-bottom: 50px;
+	}
+	&__title {
+		font: 40px/40px 'Open sans', sans-serif;
+		margin-bottom: 40px;
+	}
+	&__description {
+		& p {
+			margin-bottom: 20px;
+		}
+	}
+	&__caption {
+		font-size: 14px;
+		font-style: italic;
+		background: #fff;
+	}
+	&__subtitle {
+		font: 20px/20px 'Open sans', sans-serif;
+		margin-bottom: 0;
+	}
+	&__list {
+		list-style: none;
+		padding-left: 20px;
+		& li {
+			margin-bottom: 10px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				left: -20px;
+				top: 50%;
+				width: 15px;
+				height: 1px;
+				background: #f70000;
+			}
+		}
+	}
 }
 .b-footer {  
 	height: 330px;
