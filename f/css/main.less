@@ -1358,6 +1358,15 @@ a:focus {
 	padding: 1px 6px;
 	font-size: 10px;
 }
+.icon-photo {
+  width: 20px;
+  height: 18px;
+  background-position: -82px -174px;
+  margin: -3px 10px 0 -3px;
+}
+a:hover .icon-photo {
+  background-position: -102px -174px;
+}
 .icon-map-marker {
 	width: 11px;
 	height: 17px;
@@ -2178,7 +2187,6 @@ a:hover .icon-download {
 			position: absolute;
 			left: 50%;
 		  margin-left: -960px;
-		  position: relative;
 		  top: 0;
 		}
 	}
@@ -2192,6 +2200,12 @@ a:hover .icon-download {
 			width: 55%;
 		}
 	}
+  &_anim &__text{
+    width: 50%;
+    @media @tablet {
+      width: 45%;
+    }
+  }
 	&__title {
 		font: 50px/60px 'Open Sans', sans-serif;
 		letter-spacing: .1em;
@@ -2348,6 +2362,52 @@ a:hover .icon-download {
 			color: #fff;			
 		}
 	}
+  &__detail {
+    display: none;;
+    vertical-align: top;
+    margin-top: -70px;
+    width: 50%;
+    
+    @media @tablet {
+      width: 55%;
+      margin-top: -40px;
+    }
+    &-img {
+      min-height: 216px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    &.active {
+      display: inline-block;
+    }
+    & img {
+      position: absolute;
+      bottom: 0;
+      @media @tablet {
+        width: 100%;
+      }
+    }
+  }
+  &__achiv {
+    color: #fff;
+    font: 50px/30px 'Open Sans', sans-serif;
+    &-num {
+      color: #ff0000;
+    }
+    @media @tablet {
+      font-size: 40px;
+    }
+    &-text {
+      font: 16px/30px 'Noto sans', sans-serif;
+      &_red {
+        font-weight: bold;
+        color: #ff0000;
+      }
+      @media @tablet {
+        font-size: 14px;
+      }
+    }
+  }
 }
 .b-menu {
 	list-style: none;
@@ -4235,6 +4295,26 @@ a:hover .icon-download {
   font-weight: bold;
   font-size: 14px;
   color: #000;
+}
+.b-prom-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  &__caption {
+    color: #fff;
+    font-style: italic;
+    line-height: 50px;
+    margin-bottom: 0;
+    padding-left: 30px;
+    & span {
+      color: #f70000;
+    }
+  }
+  &__img {
+    width: 100% !important;
+  }
 }
 .b-footer {  
 	height: 330px;

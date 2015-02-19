@@ -18,7 +18,8 @@
   min-height: 0!important;
   border-radius: 0!important;
   box-shadow: none!important;
-  padding: 0!important
+  padding: 0!important;
+  top: 50px!important;
 }
 .fotorama__wrap .fotorama__grab {
   cursor: move;
@@ -447,18 +448,31 @@ transform: translate3d(0, 0, 0) */
   display: none;
 }
 .fotorama__fullscreen-icon {
-  width: 32px;
-  height: 32px;
-  top: 2px;
-  right: 2px;
-  background-position: 0 -32px;
-  z-index: 20
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background: #f70000;
+}
+.fotorama__fullscreen-icon:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../../f/i/icons.png);
+  width: 18px;
+  height: 17px;
+  background-position: -22px -144px;
 }
 .fotorama__arr:focus, .fotorama__fullscreen-icon:focus {
   border-radius: 50%
 }
 .fotorama--fullscreen .fotorama__fullscreen-icon {
-  background-position: -32px -32px
+  
 }
 .fotorama__video-play {
   width: 96px;
@@ -524,8 +538,8 @@ transform: translate3d(0, 0, 0) */
   display: none!important
 }
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__fullscreen-icon:not(:focus) {
-  -webkit-transform: translate3d(32px, -32px, 0);
-  transform: translate3d(32px, -32px, 0)
+  /* -webkit-transform: translate3d(32px, -32px, 0);
+  transform: translate3d(32px, -32px, 0) */
 }
 .fotorama__wrap--css3.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows .fotorama__arr--prev:not(:focus) {
  /*  -webkit-transform: translate3d(-48px, 0, 0);
@@ -536,8 +550,8 @@ transform: translate3d(0, 0, 0) */
 transform: translate3d(48px, 0, 0) */
 }
 .fotorama__wrap--css3.fotorama__wrap--video .fotorama__fullscreen-icon {
-  -webkit-transform: translate3d(32px, -32px, 0)!important;
-  transform: translate3d(32px, -32px, 0)!important
+  /* -webkit-transform: translate3d(32px, -32px, 0)!important;
+  transform: translate3d(32px, -32px, 0)!important */
 }
 .fotorama__wrap--css3.fotorama__wrap--video .fotorama__arr--prev {
   -webkit-transform: translate3d(-48px, 0, 0)!important;

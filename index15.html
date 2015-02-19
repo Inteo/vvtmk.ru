@@ -1,0 +1,192 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>ТМК</title>
+  <meta name="viewport" content="width=1010">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="f/css/fotorama.css">
+  <link rel="stylesheet" href="f/css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="f/js/jquery-1.11.2.min.js"></script>
+  <script src="f/js/jquery.scrollTo.min.js"></script>
+  <script src="f/js/fotorama.js"></script>
+  <script src="f/js/stickyfill.min.js"></script>
+  <script src="f/js/common.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,700,800,italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Istok+Web:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic&subset=all" rel="stylesheet" type="text/css" />
+  <script>
+    function theRotator() {
+      var elem = $(".b-top-banner_anim .b-top-banner__img img, .b-top-banner_anim .b-top-banner__detail");
+      var firstElem = $(".b-top-banner_anim .b-top-banner__img img:first, .b-top-banner_anim .b-top-banner__detail:first");
+      elem.removeClass("active");
+      firstElem.addClass("active");
+      setInterval('rotate()',8000);
+    }
+    function rotate() { 
+      var elem = $(".b-top-banner_anim .b-top-banner__img img"),
+      elem2 = $(".b-top-banner_anim .b-top-banner__detail"),
+      firstElem = $(".b-top-banner_anim .b-top-banner__img img:first");
+      firstElem2 = $(".b-top-banner_anim .b-top-banner__detail:first");
+      
+      var current = ($(".b-top-banner_anim .b-top-banner__img img.active") ? $(".b-top-banner_anim .b-top-banner__img img.active") : firstElem);
+      var current2 = ($(".b-top-banner_anim .b-top-banner__detail.active") ? $(".b-top-banner_anim .b-top-banner__detail.active") : firstElem2);
+
+      var next = ((current.next().length) ? ((current.next().hasClass("active")) ? firstElem :current.next()) : firstElem);  
+      var next2 = ((current2.next().length) ? ((current2.next().hasClass("active")) ? firstElem2 :current2.next()) : firstElem2);
+
+      next.css({opacity: 0.0})
+      .addClass("active")
+      .animate({opacity: 1.0}, 700);
+      current.animate({opacity: 0.0}, 700)
+      .removeClass("active");
+
+      next2.css({opacity: 0.0})
+      .addClass("active")
+      .animate({opacity: 1.0}, 700);
+      current2.animate({opacity: 0.0}, 700)
+      .removeClass("active");
+    };
+    $(document).ready(function(){
+      theRotator();
+    });
+    $(function () {
+      $(".b-top-banner__btn").click(function(){
+        var $fotoramaDiv = $('.fotorama').fotorama();
+        var fotorama = $fotoramaDiv.data('fotorama');
+        console.log(fotorama);
+        fotorama.requestFullScreen();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="b-wrap clearfix">  
+    <header class="b-header">
+      <div class="b-header__holder b-holder">
+        <a href="/" class="b-logo">
+          <img src="f/i/logo.png" alt="" class="b-logo__img">
+          <span class="b-logo__text">
+            <span>Верхневолжский ТМК</span>
+            Работаем с 1990 года
+          </span>
+        </a>
+        <a href="#" class="b-contact-us"><i class="icon-contact"></i>Связаться с нами</a>
+        <ul class="b-main-menu">
+          <li><a href="#">О компании</a></li><li>
+          <a href="#">Услуги</a></li><li>
+          <a href="#">Производство</a></li><li>
+          <a href="#">Проекты</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="b-content">
+      <section class="b-top-banner b-top-banner_anim">
+        <div class="b-top-banner__img">
+          <img src="f/i/main-slides/12.jpg" alt="">
+          <img src="f/i/main-slides/13.jpg" alt="">
+          <img src="f/i/main-slides/14.jpg" alt="">
+        </div>
+        <div class="b-top-banner__holder b-holder">
+          <ul class="b-menu">
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-venting-small"></i>Вентиляция</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-condit-small"></i>Кондиционирование</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-civ-def-small"></i>гражданская оборона</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-chute-small"></i>мусоропроводы</a></li>
+            <li class="b-menu__item"><a href="#" class="iconized-link"><i class="icon-thermal-small"></i>Тепловое оборудование</a></li>
+          </ul>
+          <ul class="b-breadcrumbs">
+            <li class="b-breadcrumbs__item b-breadcrumbs__item_main"><a href="#">Главная</a></li>
+            <li class="b-breadcrumbs__item"><a href="#">О компании</a></li>
+          </ul>
+          <h1 class="b-top-banner__title b-top-banner__title_top_15">Производство</h1>
+          <div class="b-top-banner__text">
+            <p class="b-top-banner__description">Большие производственные мощности, укомплектованные современными станками и оборудованием, позволяют нам оказывать услуги высокого уровня, предоставляя полный цикл производства продукции.</p>
+            <a href="#" class="b-top-banner__btn tmk-btn tmk-btn_light"><i class="icon-photo"></i>Посмотреть фото производства</a>
+          </div><div class="b-top-banner__detail">
+            <div class="b-top-banner__detail-img">
+              <img src="f/i/prom/1.png" alt="">
+            </div>
+            <p class="b-top-banner__achiv">><span class="b-top-banner__achiv-num">100 </span><span class="b-top-banner__achiv-text">высокотехнологичных и производительных </span><span class="b-top-banner__achiv-text b-top-banner__achiv-text_red">станков</span></p>
+          </div><div class="b-top-banner__detail">
+            <div class="b-top-banner__detail-img">
+              <img src="f/i/prom/2.png" alt="">
+            </div>
+            <p class="b-top-banner__achiv">><span class="b-top-banner__achiv-num">10 000 </span><span class="b-top-banner__achiv-text b-top-banner__achiv-text_red">м <sup>2</sup> </span><span class="b-top-banner__achiv-text">производственная площадка </span></p>
+          </div><div class="b-top-banner__detail">
+            <div class="b-top-banner__detail-img">
+              <img src="f/i/prom/3.png" alt="">
+            </div>
+            <p class="b-top-banner__achiv">><span class="b-top-banner__achiv-num">2000 </span><span class="b-top-banner__achiv-text b-top-banner__achiv-text_red">м<sup>2</sup> </span><span class="b-top-banner__achiv-text">производственный цех </span></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div> 
+  <div class="b-prom-photo">
+    <div id="fotorama" class="fotorama" data-allowfullscreen="true" data-nav="false">
+      <div>
+        <p class="b-prom-photo__caption"><span>На фото: </span>Наличие необходимого оборудования и персонала обеспечивает полный цикл производства.</p>
+        <img class="b-prom-photo__img" src="f/i/prom/4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <footer class="b-footer clearfix">
+    <div class="b-footer__holder b-holder">
+      <div class="b-footer__col">
+        <ul>
+          <li class="b-footer__title"><a href="#">О компании</a></li>
+          <li class="b-footer__text"><a href="#">История</a></li>
+          <li class="b-footer__text"><a href="#">Лицензии</a></li>
+          <li class="b-footer__text"><a href="#">Сертификаты и дипломы</a></li>
+          <li class="b-footer__text"><a href="#">Производство</a></li>
+          <li class="b-footer__text"><a href="#">Вакансии</a></li>
+          <li class="b-footer__text"><a href="#">Сотрудники</a></li>
+        </ul>
+      </div><div class="b-footer__col">
+        <ul>
+          <li class="b-footer__title"><a href="#" class="">Услуги</a></li>
+          <li class="b-footer__text"><a href="#">Проектирование</a></li>
+          <li class="b-footer__text"><a href="#">Производство</a></li>
+          <li class="b-footer__text"><a href="#">Монтаж</a></li>
+          <li class="b-footer__text"><a href="#">Пуско-наладка</a></li>
+          <li class="b-footer__text"><a href="#">Сервис</a></li>
+          <li class="b-footer__text"><a href="#">Ремонт <br> и техобслуживание</a></li>
+        </ul>
+      </div><div class="b-footer__col">
+        <ul>
+          <li class="b-footer__title"><a href="#" class="">Проекты</a></li>
+          <li class="b-footer__text"><a href="#">Вентиляция</a></li>
+          <li class="b-footer__text"><a href="#">Кондиционирование</a></li>
+          <li class="b-footer__text"><a href="#">Гражданская оборона</a></li>
+          <li class="b-footer__text"><a href="#">Мусоропроводы</a></li>
+          <li class="b-footer__text"><a href="#">Тепловое оборудование</a></li>
+        </ul>
+      </div><div class="b-footer__col b-footer__col_office">
+        <ul>
+          <li class="b-footer__title"><a href="#" class="">Офис</a></li>
+          <li class="b-footer__text">150044, г. Ярославль, Ленинградский пр-т, 33, ТДЦ «Омега», оф.505</li>
+          <li class="b-footer__text">Секретарь: <span>(4852) <span>58-15-02</span></span></li>
+          <li class="b-footer__text">Отдел продаж: <span>(4852) <span>58-15-07</span></span></li>
+          <li class="b-footer__text">Тех. отдел: <span>(4852) <span>58-15-08</span></span></li>
+          <li class="b-footer__text b-footer__text_email"><a href="info@vvtmk.ru">info@vvtmk.ru</a></li>
+        </ul>
+      </div><div class="b-footer__col b-footer__col_last">
+        <ul>
+          <li class="b-footer__title"><a href="#" class="">Производство</a></li>
+          <li class="b-footer__text">150044, г. Ярославль, <br> Промышленное шоссе, 5</li>
+          <li class="b-footer__text"><span>(4852) <span>49-33-47</span></span></li>
+        </ul>
+        <div  class="b-made-by">
+          <p>Создание сайта</p>
+          <a href="http://inteo-s.ru" class="b-made-by__logo"></a>
+        </div>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>
