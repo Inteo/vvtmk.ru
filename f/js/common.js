@@ -30,6 +30,48 @@ $(document).ready(function(){
      });
      return false;
    });
+
+
+	$(".b-certif__img").fancybox({
+    'beforeLoad': function(){
+    	var text = $(this.element).closest(".b-certif__item").find(".b-certif__text").text();
+    	var imgs = "";
+    	$(this.element).closest(".b-certif__item").find(".b-certif__img img").each(function(){
+    		imgs = 	imgs + "<div class='b-popup__img'>"+
+							      		"<img src='"+ $(this).attr('src')+"'>"+
+							      	 "</div>"
+    	});
+      this.content =  
+      "<div class='b-popup'>"+
+      	"<div class='popup__close iconized-link' onclick='fancy_close();'><i class='icon-close'></i></div>"+
+	      "<div class='fotorama' data-width='100%' data-nav='false' data-ratio='1/1.5'>" +
+	      	imgs +
+	      "</div>" +
+	      "<p class='b-popup__text'>"+text+"</p>"+
+      "</div>";
+    },
+    padding: 0,
+    maxWidth: 600,
+	  minWidth: 600,
+    fitToView: false,
+    autoResize: false,
+    autoCenter: false,
+    scrolling: 'no',
+    fixed: false, 
+    helpers: {
+      overlay: {
+        fixed: false
+      }
+    }
+  });
+  $(".b-certif__img").click(function(){
+  	var self = $(this);
+  	setTimeout(function(){
+  		var $fotoramaDiv = $('.fotorama').fotorama();
+		  var fotorama = $fotoramaDiv.data('fotorama');
+			fotorama.show(self.index());
+  	}, 100);
+	});
 });
 $(function(){
 	$(".b-tabs__btn").click(function(){

@@ -1862,6 +1862,9 @@ a:hover .icon-download {
 	&:hover {
 		color: @red;
 		text-decoration: underline;
+    & i {
+      background-position: 0 -32px;
+    }
 	}
 	@media @tablet {
 		margin-left: 10px;
@@ -2297,7 +2300,7 @@ a:hover .icon-download {
 	&_big {
 		height: 595px;
 	}
-	&_history {
+	&_top_0 {
 		& .b-top-banner__img img {
 			top: 0;
 		}
@@ -4253,6 +4256,12 @@ a:hover .icon-download {
 			padding-top: 40px;
 		}
 	}
+  &__img {
+    margin-bottom: 20px;
+  }
+  & img {
+    width: 100%;
+  }
 }
 .input {
 	width: 100%;
@@ -4307,7 +4316,7 @@ a:hover .icon-download {
     font-style: italic;
     line-height: 50px;
     margin-bottom: 0;
-    padding-left: 30px;
+    padding-left: 50px;
     & span {
       color: #f70000;
     }
@@ -4316,6 +4325,99 @@ a:hover .icon-download {
     width: 100% !important;
   }
 }
+.b-certif {
+  margin-left: -30px;
+  margin-bottom: 40px;
+  @media @tablet {
+    margin-left: -23px;
+  }
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+    margin-bottom: 30px;
+    @media @tablet {
+      width: 188px;
+    }
+    &_2 {
+      width: 480px;
+      margin-bottom: 40px;
+      @media @tablet {
+        width: 376px;
+      }
+      & .b-certif__text {
+        font-size: 16px;
+      }
+    }
+    &_3 {
+      width: 720px;
+      margin-bottom: 40px;
+      @media @tablet {
+        width: 564px;
+      }
+      & .b-certif__text {
+        font-size: 16px;
+      }
+    }
+  }
+  &__img {
+    margin-left: 30px;
+    width: 210px;
+    height: 300px;
+    border: 3px solid #f3f6f8;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    cursor: pointer;
+    @media @tablet {
+      width: 165px;
+      height: 236px;
+      margin-left: 23px;
+    }
+    &:hover {
+      border-color: @red;
+    }
+    & i {
+      position: absolute;
+      display: none;
+      z-index: 10;
+      right: -3px;
+      top: -3px;
+    }
+    &:hover i {
+      display: block;
+    }
+    & img {
+      width: 80%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  &__text {
+    padding-left: 30px;
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+.fotorama .b-popup__img {
+
+}
+.fotorama .b-popup__img img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: auto;
+  max-width: 100%;
+}
+
 .b-footer {  
 	height: 330px;
   margin: 0;
