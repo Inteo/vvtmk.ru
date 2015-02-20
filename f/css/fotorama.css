@@ -445,7 +445,7 @@ transform: translate3d(0, 0, 0) */
 .fotorama__arr--disabled {
   pointer-events: none;
   cursor: default;
-  display: none;
+  display: none !important;
 }
 .fotorama__fullscreen-icon {
   width: 50px;

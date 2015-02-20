@@ -61,8 +61,12 @@
         var $fotoramaDiv = $('.fotorama').fotorama();
         var fotorama = $fotoramaDiv.data('fotorama');
         fotorama.requestFullScreen();
+        $(".fotorama__img").each(function(){
+          $(this).parent().prepend("<p class='b-prom-photo__caption'><span>На фото: </span>"+ $(this).parent().find(".fotorama__caption__wrap").text() +"</p>");
+        });
       });
     });
+
   </script>
 </head>
 <body>
@@ -129,11 +133,9 @@
     </div>
   </div> 
   <div class="b-prom-photo">
-    <div id="fotorama" class="fotorama" data-allowfullscreen="true" data-nav="false">
-      <div>
-        <p class="b-prom-photo__caption"><span>На фото: </span>Наличие необходимого оборудования и персонала обеспечивает полный цикл производства.</p>
-        <img class="b-prom-photo__img" src="f/i/prom/4.jpg" alt="">
-      </div>
+    <div id="fotorama" class="fotorama" data-allowfullscreen="true" data-nav="false" data-fit="cover">
+      <img class="b-prom-photo__img" src="f/i/prom/4.jpg" alt="" data-caption="Наличие необходимого оборудования и персонала обеспечивает полный цикл производства">
+      <img class="b-prom-photo__img" src="f/i/prom/4.jpg" alt="" data-caption="Наличие необходимого оборудования и персонала обеспечивает полный цикл производства">
     </div>
   </div>
   <footer class="b-footer clearfix">
