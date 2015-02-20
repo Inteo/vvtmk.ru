@@ -4312,18 +4312,28 @@ a:hover .icon-download {
   left: 0;
   width: 0;
   height: 0;
-  &__caption {
-    color: #fff;
-    font-style: italic;
-    line-height: 50px;
-    margin-bottom: 0;
-    padding-left: 50px;
-    & span {
-      color: #f70000;
-    }
-  }
   &__img {
     width: 100% !important;
+  }
+}
+.fotorama__caption {
+  margin-bottom: 0;
+  position: absolute;
+  bottom: auto;
+  top: 0;
+  padding-left: 50px;
+  &__wrap {
+    background: none;
+    padding: 0;
+    color: #fff;
+    font: 16px/50px 'Noto sans', sans-serif;
+    font-style: italic;
+    &:before {
+      content: 'На фото: ';
+      color: #f70000;
+      font-style: italic;
+      margin-right: 5px;
+    }
   }
 }
 .b-certif {
